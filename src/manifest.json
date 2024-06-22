@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Synonym-ordbog.dk search",
+
+  "author": "mejnertz",
+  "description": "Add synonym-ordbog.dk search engine",
+  "homepage_url": "https://github.com/mejnertz/firefox-search-synonym-ordbog",
+  "short_name": "synonym_ordbog_search",
+  "version": "1.0.0",
+
+  "icons": {
+    "16": "icons/on.svg",
+    "48": "icons/on.svg",
+    "64": "icons/on.svg",
+    "96": "icons/on.svg",
+    "256": "icons/on.svg"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "SynonymOrdbogSearchExtension@mejnertz",
+        "strict_min_version": "55.0"
+    }
+  },
+
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Synonym-ordbog.dk",
+      "search_url": "https://synonym-ordbog.dk/ord/{searchTerms}",
+      "keyword": "@synonym"
+    }
+  }
+}

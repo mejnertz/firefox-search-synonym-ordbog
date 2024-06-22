@@ -1,0 +1,33 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update apt-get
+        run: sudo apt-get update -y
+
+      - name: Install firefox and npm
+        run: sudo apt-get install firefox
+
+      - name: Set up node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Build Extension
+        run: |
+          npm install
+          npm run build

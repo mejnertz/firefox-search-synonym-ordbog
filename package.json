@@ -1,0 +1,25 @@
+{
+  "title": "Firefox Search Synonym Ordbog Extension",
+  "name": "firefox-search-synonym-ordbog-extension",
+  "version": "1.0.0",
+  "description": "Synonym-ordbog.dk search engine extension.",
+  "author": "Mejnertz",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "search",
+    "synonym",
+    "ordbog",
+    "extension"
+  ],
+  "scripts": {
+    "build": "web-ext build --overwrite-dest -a ./build -s ./src",
+    "run": "web-ext run -s ./src"
+  },
+  "dependencies": {
+    "web-ext": "^8.2.0"
+  }
+}
